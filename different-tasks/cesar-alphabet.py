@@ -11,6 +11,11 @@ def encrypt(string, shift):
     return cipher
 
 
-text = input("enter string: ")
-s = int(input("enter shift number: "))
-print("after encryption: ", encrypt(text, s))
+crypted_string = 'xuo jxuhu! jxyi yi qd unqcfbu ev q squiqh syfxuh. muhu oek qrbu je tusetu yj? y xefu ie! iudt cu q cuiiqwu rqsa myjx jxu iqcu evviuj!'
+
+s = int(10)
+print(encrypt(crypted_string, s))
+
+
+
+

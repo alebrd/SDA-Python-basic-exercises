@@ -1,0 +1,14 @@
+.vscode/
+.venv/
+.idea/
+venv/
+__pycache__/
+18-filesystem/example-01-data/
+18-filesystem/example-02-data/
+
+
+*.pyc
+*.pyo
+17-file-operations/data/sample.txt
+17-file-operations/exercise-02-result.txt
+

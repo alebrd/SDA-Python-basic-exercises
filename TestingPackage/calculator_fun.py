@@ -1,4 +1,3 @@
-
 class Basic_calculator:
     def __init__(self, first_number, operand, second_number):
         self.first_number = first_number
@@ -14,18 +13,26 @@ class Basic_calculator:
         return result[0]
 
 
+object = Basic_calculator(5, '+', 7)
+
+object.first_number = 5
+object.operand = '+'
+object.second_number = 5
+
+print(object.show_result())
+
+
 def test_addition():
-    object1 = Basic_calculator(5, '+', 5)
-    # object1.first_number = 5
-    # object1.operand = '+'
-    # object1.second_number = 5
+    object1 = Basic_calculator()
+    object1.first_number = 5
+    object1.operand = '+'
+    object1.second_number = 5
     assert object1.show_result()
 
-
 def test_subtraction():
-    object1 = Basic_calculator(7, '-', 5)
-    # object1.first_number = 7
-    # object1.operand = '-'
-    # object1.second_number = 5
+    object1 = Basic_calculator()
+    object1.first_number = 7
+    object1.operand = '-'
+    object1.second_number = 5
     assert object1.show_result()
 

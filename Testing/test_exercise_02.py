@@ -1,5 +1,11 @@
-from Testing import exercise_02
+def odd_indexes(string):
+    if type(string) is str:
+        return string[1::2]
+    else:
+        return string
 
 def test_odd_indexes():
-    assert exercise_02.odd_indexes(3)
+    assert odd_indexes(5)
 
+
+ 

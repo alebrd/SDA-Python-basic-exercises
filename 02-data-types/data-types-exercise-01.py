@@ -5,3 +5,10 @@ print(False)
 print(None)
 print((1 - 1j))
 print(b'This is a byte text sequence.')
+
+s = {3, 4, 1, 1}
+
+print(max(s))
+
+
+print([1, 2].extend([3, 4]))

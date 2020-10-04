@@ -1,0 +1,40 @@
+def test_nonexistent_element():
+    ng = NaiveGetter()
+    ng.l.append(1)
+    assert ng.get_from_list(0) == 1
+    assert ng.get_from_list(1) != 1
+
+
+def test_nonexistent_attribute():
+    ng = NaiveGetter()
+    ng.append(1)
+
+
+def test_nonexistent_key():
+    ng = NaiveGetter()
+    assert ng.get_from_dict("example") is not None
+
+
+def test_iterator_stop():
+    ng = NaiveGetter()
+    ng.l = list(range(3))
+    it = ng.get_list_iterator()
+    assert next(it) == 0
+    assert next(it) == 1
+    assert next(it) == 2
+    assert next(it) is None
+
+
+class NaiveGetter:
+    def __init__(self):
+        self.l = []
+        self.d = {}
+
+    def get_from_list(self, i):
+        return self.l[i]
+
+    def get_from_dict(self, k):
+        return self.d[k]
+
+    def get_list_iterator(self):
+        return iter(self.l)

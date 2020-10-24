@@ -1,11 +1,5 @@
-def odd_indexes(string):
-    if type(string) is str:
-        return string[1::2]
-    else:
-        return string
+import exercise_02
+
 
 def test_odd_indexes():
-    assert odd_indexes(5)
-
-
- 
+    assert exercise_02.odd_indexes(5)

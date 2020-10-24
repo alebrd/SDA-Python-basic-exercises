@@ -1,6 +1,7 @@
 import re
 import pytest
 
+import functions
 
 def check_email_format(email):
     """check that the entered email format is correct"""
@@ -18,7 +19,18 @@ def provide_email():
     return 'bademail.com'
 
 
-def test_email_exception(self):
+def test_email_exception():
     """test that exception is raised for invalid emails"""
     with pytest.raises(Exception):
         assert check_email_format(provide_email())  # invalid email format to raise exception
+
+
+
+def test_ok():
+    variable_ = 2 + 2
+    variable4 = 4
+    assert variable4 == variable_
+
+def test_fun():
+    str_variable = functions.prints()
+    assert str_variable

@@ -1,2 +1,5 @@
 def odd_indexes(string):
-    return string[1::2]
+    if type(string) is str:
+        return string[1::2]
+    else:
+        return string

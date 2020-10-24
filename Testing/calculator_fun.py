@@ -22,17 +22,3 @@ object.second_number = 5
 print(object.show_result())
 
 
-def test_addition():
-    object1 = Basic_calculator()
-    object1.first_number = 5
-    object1.operand = '+'
-    object1.second_number = 5
-    assert object1.show_result()
-
-def test_subtraction():
-    object1 = Basic_calculator()
-    object1.first_number = 7
-    object1.operand = '-'
-    object1.second_number = 5
-    assert object1.show_result()
-

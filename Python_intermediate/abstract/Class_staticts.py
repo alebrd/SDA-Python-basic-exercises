@@ -1,3 +1,5 @@
+import datetime
+
 # class Person:
 #     some_class_var = 10
 #
@@ -63,9 +65,17 @@ class Employee:
         first, last, pay = emp_str.split('-')
         return cls(first, last, pay)
 
+    @staticmethod
+    def is_workday(day):
+        if day.weekday() == 5 or day.weekday() == 6:
+            return False
+        return True
 
 emp1 = Employee('Corey', 'Schafer', 50000)
 emp2 = Employee('Test', 'Employee', 60000)
+
+
+my_date = datetime.date(2020, 10, 28)
 
 # Employee.set_raise_amt(1.05)  # is the same thing
 # Employee.raise_amt = 1.05  # same thing we changing class variables
@@ -83,3 +93,4 @@ emp_str_3 = 'Jane-Jackson-90000'
 new_emp1 = Employee.from_string(emp_str_1)
 print(new_emp1.email)
 print(new_emp1.pay)
+print(Employee.is_workday(my_date))
